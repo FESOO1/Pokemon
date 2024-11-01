@@ -79,10 +79,10 @@ body {
 
 .output {
     width: 100%;
-    padding: 80px;
+    padding: 30px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px 25px;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
 }
 
 .output-itself {
