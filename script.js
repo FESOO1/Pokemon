@@ -3,6 +3,8 @@ const searchInput = document.getElementById('searchInput');
 const pokemonDetails = document.querySelector('.pokemon-details');
 const pokemonDetailsPicture = document.querySelector('.pokemon-details-picture-itself');
 const pokemonDetailsCloseBtn = document.querySelector('.pokemon-details-close-button');
+const pokemonDetailsName = document.querySelector('.pokemon-detail-name');
+const pokemonDetailsHp = document.querySelector('.pokemon-detail-hp');
 let pokemonNumbers = 10;
 
 window.addEventListener('DOMContentLoaded', fetchData);
