@@ -67,6 +67,12 @@ body {
     font-family: var(--f-poppins);
     outline: none;
     font-weight: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: background-color 300ms;
+}
+
+.input-itself:focus {
+    background-color: rgb(25,25,25);
 }
 
 /* OUTPUT */
