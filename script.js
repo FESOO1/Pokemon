@@ -5,12 +5,11 @@ let pokemonNumbers = 10;
 window.addEventListener('DOMContentLoaded', fetchData);
 
 async function fetchData() {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100');
     const responseJson = await response.json();
     
 
-
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 40; i++) {
         const pokemon = responseJson.results[i];
 
         const pokemonDetailsResponse = await fetch(pokemon.url);
@@ -21,9 +20,9 @@ async function fetchData() {
         outputItself.classList.add('output-itself');
         outputItself.innerHTML = `
             <div class="output-picture">
-                <img src="${getImage[i]}" alt="${responseJson.results[i].name}" class="output-picture-itself">
+                <img src="${getImage}" alt="${pokemon.name}" class="output-picture-itself">
             </div>
-            <h4 class="output-name">${responseJson.results[i].name}</h4>
+            <h4 class="output-name">${pokemon.name}</h4>
         `;
 
         outputContainer.appendChild(outputItself);
