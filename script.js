@@ -49,7 +49,7 @@ async function fetchData() {
         outputContainer.children[i].addEventListener('click', e => {
             e.preventDefault();
 
-            pokemonDetails.style.display = 'flex';
+            /* pokemonDetails.style.display = 'flex'; */
         });
     };
 };
