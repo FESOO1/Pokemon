@@ -79,10 +79,10 @@ body {
 
 .output {
     width: 100%;
-    padding: 20px;
+    padding: 80px;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 10px 8px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px 25px;
 }
 
 .output-itself {
@@ -113,4 +113,6 @@ body {
     color: white;
     font-family: var(--f-itim);
     font-weight: 300;
+    padding-block: 10px;
+    font-size: 1.5rem;
 }

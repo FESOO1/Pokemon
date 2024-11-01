@@ -1,14 +1,14 @@
 const outputContainer = document.querySelector('.output');
 let pokemonNumbers = 10;
 
-window.addEventListener('click', fetchData);
+window.addEventListener('DOMContentLoaded', fetchData);
 
 async function fetchData() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
     const responseJson = await response.json();
 
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
         const outputItself = document.createElement('div');
         outputItself.classList.add('output-itself');
         outputItself.innerHTML = `
