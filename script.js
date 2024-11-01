@@ -51,8 +51,11 @@ async function fetchData() {
         outputItself.addEventListener('click', e => {
             e.preventDefault();
 
+            pokemonDetailsPicture.src = getImage[i];
             pokemonDetails.style.display = 'flex';
         });
+
+
     };
 };
 
