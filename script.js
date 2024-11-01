@@ -24,9 +24,9 @@ async function fetchData() {
         const outputItself = document.createElement('div');
         outputItself.classList.add('output-itself');
         outputItself.innerHTML = `
-            <a href="#${pokemon.name}" class="output-picture">
+            <div class="output-picture">
                 <img src="${getImage}" alt="${pokemon.name}" class="output-picture-itself">
-            </a>
+            </div>
             <h4 class="output-name">${pokemon.name}</h4>
         `;
 
@@ -48,10 +48,10 @@ async function fetchData() {
 
 
         // POKEMON DETAILS
-        outputContainer.children[i].addEventListener('click', e => {
+        outputItself.addEventListener('click', e => {
             e.preventDefault();
 
-            /* pokemonDetails.style.display = 'flex'; */
+            pokemonDetails.style.display = 'flex';
         });
     };
 };
