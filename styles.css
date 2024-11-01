@@ -81,8 +81,8 @@ body {
     width: 100%;
     padding: 30px;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px 40px;
 }
 
 .output-itself {
@@ -92,9 +92,9 @@ body {
     align-items: center;
     row-gap: 5px;
     padding: 5px;
-    background-color: rgb(25,25,25);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: linear-gradient(transparent 50%, rgb(20,20,20) 60%);
     border-radius: 0.4rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .output-itself-shown {
