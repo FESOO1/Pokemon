@@ -97,6 +97,14 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+.output-itself-shown {
+    display: flex;
+}
+
+.output-itself-hidden {
+    display: none;
+}
+
 .output-picture {
     width: 100%;
     width: 100%;

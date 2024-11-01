@@ -1,4 +1,5 @@
 const outputContainer = document.querySelector('.output');
+const searchInput = document.getElementById('searchInput');
 let pokemonNumbers = 10;
 
 window.addEventListener('DOMContentLoaded', fetchData);
@@ -19,5 +20,28 @@ async function fetchData() {
         `;
 
         outputContainer.appendChild(outputItself);
+
+        const allPokemonNames = document.querySelectorAll('.output-name');
+
+        searchInput.addEventListener('input', () => {
+
+            const nameOfThePokemon = responseJson.results[i].name;
+
+            if (nameOfThePokemon.includes(searchInput.value)) {
+                outputItself.classList.add('output-itself-shown');
+                outputItself.classList.remove('output-itself-hidden');
+            } else {
+                outputItself.classList.add('output-itself-hidden');
+                outputItself.classList.remove('output-itself-shown');
+            }
+
+            /* if (allPokemonNames[i].textContent.includes(searchInput.value)) {
+                outputItself.classList.add('output-itself-shown');
+                outputItself.classList.remove('output-itself-hidden');
+            } else {
+                outputItself.classList.add('output-itself-hidden');
+                outputItself.classList.remove('output-itself-shown');
+            }; */
+        });
     };
 }
