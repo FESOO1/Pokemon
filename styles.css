@@ -82,6 +82,7 @@ body {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    gap: 10px 8px;
 }
 
 .output-itself {
