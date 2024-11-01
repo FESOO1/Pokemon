@@ -46,11 +46,13 @@ async function fetchData() {
 
 
         // POKEMON DETAILS
-        outputItself.addEventListener('click', () => {
+        outputContainer.children[i].addEventListener('click', e => {
+            e.preventDefault();
+
             pokemonDetails.style.display = 'flex';
         });
     };
-}
+};
 
 pokemonDetailsCloseBtn.addEventListener('click', () => {
     pokemonDetails.style.display = 'none';
