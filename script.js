@@ -47,6 +47,8 @@ async function fetchData() {
         const responseTwo = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
         const jsonResponse = await responseTwo.json();
 
+        console.log(jsonResponse.weight)
+
         outputItself.addEventListener('click', () => {
             localStorage.setItem('pokemonName', pokemon.name);
             localStorage.setItem('pokemonWeight', jsonResponse.weight);
