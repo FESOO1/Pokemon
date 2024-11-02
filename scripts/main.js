@@ -1,6 +1,5 @@
 const outputContainer = document.querySelector('.output');
 const searchInput = document.getElementById('searchInput');
-let pokemonNumbers = 0;
 
 window.addEventListener('DOMContentLoaded', fetchData);
 
@@ -8,8 +7,7 @@ async function fetchData() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100');
     const responseJson = await response.json();
 
-    for (let i = 0; i < 40; i++) {
-        pokemonNumbers++;
+    for (let i = 0; i < 100; i++) {
 
         const pokemon = responseJson.results[i];
 
