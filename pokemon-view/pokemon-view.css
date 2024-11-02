@@ -19,6 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .pokemon-details-inner {
@@ -28,10 +29,11 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 .paragraph {
-    color: white;
+    color: gray;
     position: absolute;
     top: 15px;
     left: 50%;
@@ -39,6 +41,17 @@ body {
     font-family: var(--f-poppins);
     font-weight: 300;
     font-size: 0.8rem;
+}
+
+.shadow {
+    top: calc(100% + 20px);
+    position: absolute;
+    width: 350px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.225);
+    border-radius: 1rem;
+    filter: blur(40px);
+    transform: perspective(400px) rotateX(60deg);
 }
 
 .pokemon-details-close-button {
@@ -74,6 +87,7 @@ body {
     background-color: rgb(28, 28, 28);
     background: linear-gradient(45deg, rgb(28,28,28), rgb(53, 53, 53), rgb(28,28,28));
     border-radius: 1rem;
+    z-index: 555;
 }
 
 .pokemon-picture {

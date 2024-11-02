@@ -3,6 +3,7 @@ const pokemonPictureContainer = document.querySelector('.pokemon-details-themsel
 const pokemonDetailsPicture = document.querySelector('.pokemon-details-picture-itself');
 const pokemonDetailsName = document.querySelector('.pokemon-detail-name');
 const pokemonDetailsWeight = document.querySelector('.pokemon-detail-weight');
+const shadow = document.querySelector('.shadow');
 let positionX = 0, positionY = 0;
 
 // ROTATING THE IMAGE BASED ON WHERE THE MOUSE CORDANATION IS.
@@ -32,9 +33,12 @@ pokemonPictureContainer.addEventListener('mousedown', e => {
 
         pokemonPictureContainer.style.transition = 'transform 500ms';
         pokemonPictureContainer.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        shadow.style.transition = 'transform 500ms';
+        shadow.style.transform = `perspective(400px) rotateX(60deg) rotateY(0deg)`;
 
         setTimeout(() => {
             pokemonPictureContainer.style.transition = 'none';
+            shadow.style.transition = 'none';
         }, 501);
     });
 });
@@ -44,6 +48,7 @@ function mouseMove(e) {
     positionY = e.clientY;
 
     pokemonPictureContainer.style.transform = `perspective(500px) rotateY(${positionX}deg) rotateX(-${positionY}deg)`;
+    shadow.style.transform = `perspective(400px) rotateX(60deg) rotateZ(-${positionX}deg)`;
 };
 
 // ACCESSING THE DATA FROM LOCAL STORAGE TO DISPLAY IT IN THE CONTAINERS.
