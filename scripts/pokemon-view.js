@@ -3,6 +3,7 @@ const pokemonPictureContainer = document.querySelector('.pokemon-details-themsel
 const pokemonDetailsPicture = document.querySelector('.pokemon-details-picture-itself');
 const pokemonDetailsName = document.querySelector('.pokemon-detail-name');
 const pokemonDetailsWeight = document.querySelector('.pokemon-detail-weight');
+const title = document.querySelector('title');
 const shadow = document.querySelector('.shadow');
 let positionX = 0, positionY = 0;
 
@@ -60,6 +61,7 @@ function getDataFromLocalStorage() {
         pokemonDetailsName.textContent = pokemonName.toUpperCase();
         pokemonDetailsWeight.textContent = pokemonWeight + 'kg';
         pokemonDetailsPicture.src = pokemonPicture;
+        title.textContent = `Pokemon - ${pokemonName.toUpperCase()}`;
     };
 };
 
