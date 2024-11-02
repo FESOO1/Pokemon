@@ -1,6 +1,6 @@
 const outputContainer = document.querySelector('.output');
 const searchInput = document.getElementById('searchInput');
-let pokemonNumbers = 10;
+let pokemonNumbers = 40;
 
 window.addEventListener('DOMContentLoaded', fetchData);
 
@@ -48,10 +48,15 @@ async function fetchData() {
         const jsonResponse = await responseTwo.json();
         const pokemonImage = jsonResponse.sprites.other['official-artwork'].front_default;
 
-        outputItself.addEventListener('click', () => {
+
+        outputItself.addEventListener('click', e => {
+            /* e.preventDefault(); */
+
             localStorage.setItem('pokemonName', pokemon.name);
             localStorage.setItem('pokemonWeight', jsonResponse.weight);
-            localStorage.setItem('pokemonImage', pokemonImage);
+            localStorage.setItem('pokemonImage', outputContainer.children[outputItself]);
+
+            console.log(pokemonImage);
         });
 
 
