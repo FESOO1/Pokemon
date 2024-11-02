@@ -24,12 +24,12 @@ pokemonDetailsInner.addEventListener('mouseenter', e => {
 });
 
 function mouseMove(e) {
-    positionX = e.clientX - 500;
-    positionY = e.clientY - 500;
+    positionX = e.clientX;
+    positionY = e.clientY;
 
     console.log(positionX, positionY);
 
-    pokemonPictureContainer.style.transform = `perspective(500px) rotateY(${positionX}deg)`;
+    pokemonPictureContainer.style.transform = `perspective(500px) rotateY(${positionX}deg) rotateX(-${positionY}deg)`;
 };
 
 // ACCESSING THE DATA FROM LOCAL STORAGE TO DISPLAY IT IN THE CONTAINERS.

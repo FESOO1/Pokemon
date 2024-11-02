@@ -57,11 +57,12 @@ body {
 }
 
 .pokemon-details-picture {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     width: 350px;
     background-color: rgb(28, 28, 28);
-    background: linear-gradient(45deg, rgb(28,28,28), rgb(35,35,35), rgb(28,28,28));
+    background: linear-gradient(45deg, rgb(28,28,28), rgb(53, 53, 53), rgb(28,28,28));
     border-radius: 1rem;
-    border: 1;
     overflow: hidden;
     line-height: 0;
     display: flex;
