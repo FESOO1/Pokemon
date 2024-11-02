@@ -46,13 +46,12 @@ async function fetchData() {
 
         const responseTwo = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
         const jsonResponse = await responseTwo.json();
-
-        console.log(jsonResponse.weight)
+        const pokemonImage = jsonResponse.sprites.other['official-artwork'].front_default;
 
         outputItself.addEventListener('click', () => {
             localStorage.setItem('pokemonName', pokemon.name);
             localStorage.setItem('pokemonWeight', jsonResponse.weight);
-            localStorage.setItem('pokemonImage', getImage);
+            localStorage.setItem('pokemonImage', pokemonImage);
         });
 
 
