@@ -21,8 +21,9 @@ async function fetchData() {
         const pokemonDetails = await pokemonDetailsResponse.json();
         const getImage = pokemonDetails.sprites.other["official-artwork"].front_default;
 
-        const outputItself = document.createElement('div');
+        const outputItself = document.createElement('a');
         outputItself.classList.add('output-itself');
+        outputItself.href = './pokemon-view/pokemon-view.html';
         outputItself.innerHTML = `
             <div class="output-picture">
                 <img src="${getImage}" alt="${pokemon.name}" class="output-picture-itself">
@@ -51,8 +52,8 @@ async function fetchData() {
         outputItself.addEventListener('click', e => {
             e.preventDefault();
 
-            pokemonDetailsPicture.src = getImage[i];
-            pokemonDetails.style.display = 'flex';
+            /* pokemonDetailsPicture.src = getImage[i];
+            pokemonDetails.style.display = 'flex'; */
         });
 
 
