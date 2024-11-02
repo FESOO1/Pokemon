@@ -32,6 +32,7 @@
     color: white;
     font-family: var(--f-itim);
     font-weight: 400;
+    text-align: center;
 }
 
 .input-itself {
@@ -111,4 +112,44 @@
     font-weight: 300;
     padding-block: 10px;
     font-size: 1.5rem;
+}
+
+/* MEDIA QURIES */
+
+@media (max-width: 1200px) {
+    .output {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .input-itself {
+        width: 100%;
+    }
+    .input {
+        padding-inline: 40px;
+    }
+    .output {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .output {
+        padding: 30px 20px;
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .output {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 350px) {
+    .input {
+        padding-inline: 20px;
+    }
 }

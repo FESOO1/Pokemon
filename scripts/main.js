@@ -19,7 +19,7 @@ async function fetchData() {
 
         const outputItself = document.createElement('a');
         outputItself.classList.add('output-itself');
-        outputItself.href = './pokemon-view/pokemon-view.html';
+        outputItself.href = './pages/pokemon-view.html';
         outputItself.innerHTML = `
             <div class="output-picture">
                 <img src="${getImage}" alt="${pokemon.name}" class="output-picture-itself">
