@@ -1,5 +1,5 @@
 const pokemonDetailsInner = document.querySelector('.pokemon-details-inner');
-const pokemonPictureContainer = document.querySelector('.pokemon-details-picture');
+const pokemonPictureContainer = document.querySelector('.pokemon-details-themselves');
 const pokemonDetailsPicture = document.querySelector('.pokemon-details-picture-itself');
 const pokemonDetailsName = document.querySelector('.pokemon-detail-name');
 const pokemonDetailsWeight = document.querySelector('.pokemon-detail-weight');
@@ -7,12 +7,28 @@ let positionX = 0, positionY = 0;
 
 // ROTATING THE IMAGE BASED ON WHERE THE MOUSE CORDANATION IS.
 
-pokemonDetailsInner.addEventListener('mouseenter', e => {
+/* pokemonDetailsInner.addEventListener('mouseenter', e => {
 
     pokemonDetailsInner.addEventListener('mousemove', mouseMove);
 
     pokemonDetailsInner.addEventListener('mouseleave', () => {
         pokemonDetailsInner.removeEventListener('mousemove', mouseMove);
+
+        pokemonPictureContainer.style.transition = 'transform 500ms';
+        pokemonPictureContainer.style.transform = 'rotateX(0deg) rotateY(0deg)';
+
+        setTimeout(() => {
+            pokemonPictureContainer.style.transition = 'none';
+        }, 501);
+    });
+}); */
+
+pokemonPictureContainer.addEventListener('mousedown', e => {
+
+    document.addEventListener('mousemove', mouseMove);
+
+    document.addEventListener('mouseup', () => {
+        document.removeEventListener('mousemove', mouseMove);
 
         pokemonPictureContainer.style.transition = 'transform 500ms';
         pokemonPictureContainer.style.transform = 'rotateX(0deg) rotateY(0deg)';
