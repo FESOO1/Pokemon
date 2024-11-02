@@ -78,11 +78,11 @@ body {
 
 .pokemon-detail-name {
     color: white;
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 200;
 }
 
-.pokemon-detail-hp {
+.pokemon-detail-weight {
     color: orangered;
     font-size: 2rem;
 }

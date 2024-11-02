@@ -1,10 +1,5 @@
 const outputContainer = document.querySelector('.output');
 const searchInput = document.getElementById('searchInput');
-const pokemonDetails = document.querySelector('.pokemon-details');
-const pokemonDetailsPicture = document.querySelector('.pokemon-details-picture-itself');
-const pokemonDetailsCloseBtn = document.querySelector('.pokemon-details-close-button');
-const pokemonDetailsName = document.querySelector('.pokemon-detail-name');
-const pokemonDetailsHp = document.querySelector('.pokemon-detail-hp');
 let pokemonNumbers = 10;
 
 window.addEventListener('DOMContentLoaded', fetchData);
@@ -12,7 +7,6 @@ window.addEventListener('DOMContentLoaded', fetchData);
 async function fetchData() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100');
     const responseJson = await response.json();
-    
 
     for (let i = 0; i < 40; i++) {
         const pokemon = responseJson.results[i];
@@ -49,17 +43,16 @@ async function fetchData() {
 
 
         // POKEMON DETAILS
-        outputItself.addEventListener('click', e => {
-            e.preventDefault();
 
-            /* pokemonDetailsPicture.src = getImage[i];
-            pokemonDetails.style.display = 'flex'; */
+        const responseTwo = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
+        const jsonResponse = await responseTwo.json();
+
+        outputItself.addEventListener('click', () => {
+            localStorage.setItem('pokemonName', pokemon.name);
+            localStorage.setItem('pokemonWeight', jsonResponse.weight);
+            localStorage.setItem('pokemonImage', getImage);
         });
 
 
     };
 };
-
-pokemonDetailsCloseBtn.addEventListener('click', () => {
-    pokemonDetails.style.display = 'none';
-});
