@@ -8,6 +8,7 @@ body {
     background-color: rgb(28,28,28);
 }
 
+
 /* POKEMON DETAILS */
 
 .pokemon-details {
@@ -27,6 +28,17 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.paragraph {
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--f-poppins);
+    font-weight: 300;
+    font-size: 0.8rem;
 }
 
 .pokemon-details-close-button {
