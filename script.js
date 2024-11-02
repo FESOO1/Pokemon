@@ -51,12 +51,11 @@ async function fetchData() {
         const pokemonImage = jsonResponse.sprites.other['official-artwork'].front_default;
 
 
-        outputItself.addEventListener('click', e => {
-            /* e.preventDefault(); */
+        outputItself.addEventListener('click', () => {
 
             localStorage.setItem('pokemonName', pokemon.name);
             localStorage.setItem('pokemonWeight', jsonResponse.weight);
-            /* localStorage.setItem('pokemonImage', outputContainer.children[pokemonNumbers]); */
+            localStorage.setItem('pokemonImage', pokemonImage);
         });
     };
 };
