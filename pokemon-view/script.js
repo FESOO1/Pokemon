@@ -9,7 +9,7 @@ function getDataFromLocalStorage() {
     if (pokemonName) {
         pokemonDetailsName.textContent = pokemonName.toUpperCase();
         pokemonDetailsWeight.textContent = pokemonWeight + 'kg';
-        pokemonDetailsPicture.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonPicture}.png`;
+        pokemonDetailsPicture.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png`;
     };
 };
 

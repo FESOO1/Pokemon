@@ -1,6 +1,6 @@
 const outputContainer = document.querySelector('.output');
 const searchInput = document.getElementById('searchInput');
-let pokemonNumbers = 40;
+let pokemonNumbers = 0;
 
 window.addEventListener('DOMContentLoaded', fetchData);
 
@@ -9,6 +9,8 @@ async function fetchData() {
     const responseJson = await response.json();
 
     for (let i = 0; i < 40; i++) {
+        pokemonNumbers++;
+
         const pokemon = responseJson.results[i];
 
         const pokemonDetailsResponse = await fetch(pokemon.url);
@@ -54,11 +56,7 @@ async function fetchData() {
 
             localStorage.setItem('pokemonName', pokemon.name);
             localStorage.setItem('pokemonWeight', jsonResponse.weight);
-            localStorage.setItem('pokemonImage', outputContainer.children[outputItself]);
-
-            console.log(pokemonImage);
+            /* localStorage.setItem('pokemonImage', outputContainer.children[pokemonNumbers]); */
         });
-
-
     };
 };
