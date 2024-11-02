@@ -122,3 +122,25 @@ body {
     color: orangered;
     font-size: 2rem;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+    .paragraph {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .shadow,
+    .pokemon-details-themselves {
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px) {
+    .shadow,
+    .pokemon-details-themselves {
+        width: 280px;
+    }
+}
